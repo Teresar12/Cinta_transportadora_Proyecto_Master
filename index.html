@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dimensionado de cintas transportadoras</title>
+<script>
+  // Aplica el tema guardado ANTES de que se pinte la página, para que no
+  // se vea un parpadeo del tema oscuro antes de cambiar al claro.
+  // Este script NO lleva defer a propósito: tiene que ejecutarse ya.
+  (function () {
+    try {
+      if (localStorage.getItem("cinta-tema") === "claro") {
+        document.documentElement.setAttribute("data-tema", "claro");
+      }
+    } catch (e) { /* almacenamiento no disponible: se queda en oscuro */ }
+  })();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<script src="js/calculo.js" defer></script>
+<script src="js/dibujos.js" defer></script>
+<script src="js/app.js" defer></script>
+</head>
+<body>
+
+<header class="cabecera">
+  <div class="ancho">
+    <p class="ficha">TRANSPORTE Y MANUTENCIÓN INDUSTRIAL · MÁSTER EN INGENIERÍA INDUSTRIAL · USAL</p>
+    <h1>Dimensionado de cintas transportadoras</h1>
+    <p class="sub">Introduce el material y las condiciones de transporte: la aplicación calcula al instante el ancho de banda, las resistencias, la potencia del motor, las tensiones y la designación de la banda, con la memoria de cálculo completa.</p>
+    <div class="acciones-cab">
+      <button id="btn-ejemplo" class="boton boton-ambar" type="button">Cargar ejemplo del Readme</button>
+      <button id="btn-imprimir" class="boton boton-linea" type="button">Imprimir / guardar PDF</button>
+      <button id="btn-tema" class="boton boton-linea" type="button" aria-pressed="false">🌙 Modo oscuro</button>
+    </div>
+    <p id="estado-carga" class="estado" role="status"></p>
+  </div>
+</header>
+
+<main class="ancho rejilla">
+
+  <!-- ============================ COLUMNA DE ENTRADA ============================ -->
+  <section class="columna-entrada" aria-label="Datos de entrada">
+
+    <fieldset class="panel" id="bloque-material">
+      <legend><span class="indice">1</span> Material</legend>
+
+      <div class="campo">
+        <label for="buscador-material">Buscar material</label>
+        <input type="search" id="buscador-material" placeholder="Escribe parte del nombre…" autocomplete="off">
+      </div>
+      <div class="campo">
+        <label for="material">Material</label>
+        <select id="material"></select>
+      </div>
+
+      <div class="ficha-material" id="ficha-material" hidden>
+        <div><span>Peso específico</span><strong id="dato-pesorango"></strong></div>
+        <div><span>Ángulo de reposo α</span><strong id="dato-alfa"></strong></div>
+        <div><span>Fluidez</span><strong id="dato-fluidez"></strong></div>
+        <div><span>Abrasividad</span><strong id="dato-abrasividad"></strong></div>
+        <div><span>Corrosividad</span><strong id="dato-corrosividad"></strong></div>
+      </div>
+
+      <div class="rejilla-2" id="bloque-personalizado" hidden>
+        <div class="campo"><label for="alfa-pers">α personalizado (°)</label><input type="number" id="alfa-pers" min="0" max="50" step="1"></div>
+        <div class="campo"><label for="abras-pers">Abrasividad</label>
+          <select id="abras-pers"><option value="A">A - poco abrasivo</option><option value="B">B - medio</option><option value="C">C - muy abrasivo</option></select>
+        </div>
+        <div class="campo"><label for="corros-pers">Corrosividad</label>
+          <select id="corros-pers"><option value="A">A - no corrosivo</option><option value="B">B - medio</option><option value="C">C - muy corrosivo</option></select>
+        </div>
+      </div>
+
+      <div class="campo campo-rango">
+        <label for="pesoEspecifico">Peso específico q<sub>s</sub> <small>(t/m³)</small></label>
+        <div class="par-rango">
+          <input type="range" id="pesoEspecifico-rango" min="0.3" max="3" step="0.01" aria-label="Peso específico (deslizador)">
+          <input type="number" id="pesoEspecifico" min="0.3" max="3" step="0.01">
+        </div>
+        <p class="ayuda">Por defecto se toma el mínimo de la tabla (más desfavorable: da más volumen y más ancho).</p>
+      </div>
+
+      <div class="campo">
+        <label for="beta">Ángulo de sobrecarga β <small>(tabla de fluidez de los apuntes)</small></label>
+        <select id="beta"></select>
+      </div>
+    </fieldset>
+
+    <fieldset class="panel" id="bloque-condiciones">
+      <legend><span class="indice">2</span> Condiciones de transporte</legend>
+
+      <div class="campo campo-rango">
+        <label for="Q">Caudal Q <small>(t/h)</small></label>
+        <div class="par-rango"><input type="range" id="Q-rango" min="1" max="3000" step="1" aria-label="Caudal (deslizador)"><input type="number" id="Q" min="0.1" step="0.1"></div>
+      </div>
+
+      <div class="campo campo-rango">
+        <label for="v">Velocidad v <small>(m/s)</small></label>
+        <div class="par-rango"><input type="range" id="v-rango" min="0.2" max="6" step="0.01" aria-label="Velocidad (deslizador)"><input type="number" id="v" min="0.05" step="0.01" list="velocidades"></div>
+        <datalist id="velocidades"></datalist>
+        <div class="chips" id="chips-velocidad"></div>
+      </div>
+
+      <div class="campo campo-rango">
+        <label for="L">Longitud entre ejes L <small>(m)</small></label>
+        <div class="par-rango"><input type="range" id="L-rango" min="3" max="2000" step="1" aria-label="Longitud (deslizador)"><input type="number" id="L" min="1" step="1"></div>
+      </div>
+
+      <div class="campo campo-rango">
+        <label for="inclinacion">Inclinación δ <small>(°, 0-20)</small></label>
+        <div class="par-rango"><input type="range" id="inclinacion-rango" min="0" max="20" step="0.5" aria-label="Inclinación (deslizador)"><input type="number" id="inclinacion" min="0" max="20" step="0.5"></div>
+      </div>
+
+      <div class="rejilla-2">
+        <div class="campo"><label for="K1">Regularidad de alimentación</label><select id="K1"></select></div>
+        <div class="campo"><label for="terronMax">Terrón máx. <small>(mm, opcional)</small></label><input type="number" id="terronMax" min="0" step="1" placeholder="—"></div>
+      </div>
+    </fieldset>
+
+    <fieldset class="panel" id="bloque-estacion">
+      <legend><span class="indice">3</span> Tipo de cinta</legend>
+
+      <div class="campo">
+        <span class="label-grupo">Estación de rodillos</span>
+        <div class="radios" id="radios-tipo">
+          <label><input type="radio" name="tipoEstacion" value="plana"> Plana</label>
+          <label><input type="radio" name="tipoEstacion" value="dos"> 2 rodillos (V)</label>
+          <label><input type="radio" name="tipoEstacion" value="tres" checked> 3 rodillos (artesa)</label>
+          <label><input type="radio" name="tipoEstacion" value="cinco"> 5 rodillos (guirnalda)</label>
+        </div>
+      </div>
+
+      <div class="rejilla-2">
+        <div class="campo"><label for="lambda">Ángulo de artesa λ</label><select id="lambda"></select></div>
+        <div class="campo"><label for="anchoImpuesto">Ancho de banda</label><select id="anchoImpuesto"></select></div>
+      </div>
+      <p class="ayuda" id="rango-anchos"></p>
+
+      <div class="rejilla-2">
+        <div class="campo"><label for="pasoCarga">Paso rodillos carga a<sub>o</sub> <small>(m)</small></label><input type="number" id="pasoCarga" min="0.1" step="0.1"></div>
+        <div class="campo"><label for="pasoRetorno">Paso rodillos retorno a<sub>u</sub> <small>(m)</small></label><input type="number" id="pasoRetorno" min="0.1" step="0.1"></div>
+      </div>
+      <div class="campo"><label for="diametroRodillo">Diámetro de rodillo</label><select id="diametroRodillo"></select></div>
+      <div class="rejilla-2">
+        <div class="campo"><label for="masaRodillosCarga">Masa rodillo carga <small>(kg, opcional)</small></label><input type="number" id="masaRodillosCarga" min="0" step="0.1" placeholder="estimar"></div>
+        <div class="campo"><label for="masaRodillosRetorno">Masa rodillo retorno <small>(kg, opcional)</small></label><input type="number" id="masaRodillosRetorno" min="0" step="0.1" placeholder="estimar"></div>
+      </div>
+    </fieldset>
+
+    <fieldset class="panel" id="bloque-banda">
+      <legend><span class="indice">4</span> Banda y accionamiento</legend>
+
+      <div class="rejilla-2">
+        <div class="campo"><label for="tejido">Calidad de tejido</label><select id="tejido"></select></div>
+        <div class="campo"><label for="coefSeguridad">Coeficiente de seguridad CS</label><input type="number" id="coefSeguridad" min="1" step="0.5"></div>
+      </div>
+      <div class="rejilla-2">
+        <div class="campo"><label for="calidadRecubrimiento">Calidad del recubrimiento</label><select id="calidadRecubrimiento"></select></div>
+        <div class="campo"><label for="f">Coeficiente de rozamiento f</label><select id="f"></select></div>
+      </div>
+      <div class="rejilla-2">
+        <div class="campo"><label for="espesorSuperior">Espesor superior <small>(mm)</small></label><input type="number" id="espesorSuperior" min="0" step="0.5"></div>
+        <div class="campo"><label for="espesorInferior">Espesor inferior <small>(mm)</small></label><input type="number" id="espesorInferior" min="0" step="0.5"></div>
+      </div>
+      <div class="rejilla-2">
+        <div class="campo"><label for="mu">Rozamiento banda-tambor μ</label><select id="mu"></select></div>
+        <div class="campo"><label for="theta">Ángulo de abrazamiento θ</label><select id="theta"></select></div>
+      </div>
+      <div class="rejilla-2">
+        <div class="campo"><label for="diametroTambor">Diámetro de tambor</label><select id="diametroTambor"></select></div>
+        <div class="campo"><label for="rendimiento">Rendimiento η</label><input type="number" id="rendimiento" min="0.1" max="1" step="0.01"></div>
+      </div>
+      <div class="campo"><label for="coefCManual">Coeficiente C manual <small>(opcional, DIN 22101)</small></label><input type="number" id="coefCManual" min="0" step="0.01" placeholder="interpolar automáticamente"></div>
+    </fieldset>
+
+  </section>
+
+  <!-- ============================ COLUMNA DE RESULTADOS ============================ -->
+  <section class="columna-resultados" aria-label="Resultados">
+
+    <div class="panel panel-resumen" id="panel-resumen">
+      <div class="lectura">
+        <span class="etiqueta-lectura">Ancho de banda</span>
+        <strong id="res-ancho">—</strong>
+      </div>
+      <div class="lectura">
+        <span class="etiqueta-lectura">Grado de llenado</span>
+        <strong id="res-llenado">—</strong>
+      </div>
+      <div class="lectura">
+        <span class="etiqueta-lectura">Potencia del motor</span>
+        <strong id="res-potencia">—</strong>
+      </div>
+      <div class="lectura">
+        <span class="etiqueta-lectura">Tensión máxima T₁</span>
+        <strong id="res-t1">—</strong>
+      </div>
+      <div class="lectura lectura-ancha">
+        <span class="etiqueta-lectura">Designación de la banda (UNE 18025)</span>
+        <strong id="res-designacion">—</strong>
+      </div>
+    </div>
+
+    <div id="zona-error" class="panel panel-error" role="alert" hidden></div>
+
+    <div class="panel" id="panel-avisos">
+      <h2>Comprobaciones</h2>
+      <ul id="lista-avisos" class="avisos"></ul>
+    </div>
+
+    <div class="panel panel-svg">
+      <h2>Sección cargada</h2>
+      <svg id="svg-seccion" viewBox="0 0 420 260" role="img" aria-label="Sección transversal de la banda cargada"></svg>
+    </div>
+
+    <div class="panel panel-svg">
+      <h2>Capacidad por ancho de banda</h2>
+      <svg id="svg-capacidades" viewBox="0 0 420 260" role="img" aria-label="Capacidad máxima de cada ancho disponible frente al caudal pedido"></svg>
+    </div>
+
+    <div class="panel panel-svg">
+      <h2>Tensiones en el recorrido</h2>
+      <svg id="svg-tensiones" viewBox="0 0 420 220" role="img" aria-label="Esquema de tensiones T1, T2, T3 y T4 en el lazo de la banda"></svg>
+    </div>
+
+    <div class="panel panel-memoria">
+      <h2>Memoria de cálculo</h2>
+      <ol id="memoria-calculo" class="memoria"></ol>
+    </div>
+
+  </section>
+
+</main>
+
+<footer class="pie">
+  <div class="ancho">
+    <p>Trabajo realizado por Fernando Martín García y Teresa Rodríguez Rodríguez.</p>
+    <p>Herramienta de predimensionado con fines docentes. El diseño final debe contrastarse con el catálogo del fabricante.</p>
+  </div>
+</footer>
+
+</body>
+</html>

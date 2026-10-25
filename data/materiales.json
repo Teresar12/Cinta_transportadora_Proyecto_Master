@@ -1,0 +1,1259 @@
+{
+  "fuente": "Rulmeca, Tab. 2 - Peso específico aparente, ángulo de reposo, abrasividad y corrosividad de materiales a granel",
+  "unidades": {
+    "peso": "t/m3",
+    "angulo": "grados"
+  },
+  "lista": [
+    {
+      "clave": "alumina",
+      "material": "Alúmina",
+      "pesoMin": 0.8,
+      "pesoMax": 1.04,
+      "alfaMin": 22,
+      "alfaMax": 22,
+      "abrasividad": "C",
+      "corrosividad": "A"
+    },
+    {
+      "clave": "amianto-mineral-o-roca",
+      "material": "Amianto mineral o roca",
+      "pesoMin": 1.296,
+      "pesoMax": 1.296,
+      "alfaMin": null,
+      "alfaMax": null,
+      "abrasividad": "C",
+      "corrosividad": "A"
+    },
+    {
+      "clave": "antracita",
+      "material": "Antracita",
+      "pesoMin": 0.96,
+      "pesoMax": 0.96,
+      "alfaMin": 27,
+      "alfaMax": 27,
+      "abrasividad": "B",
+      "corrosividad": "A"
+    },
+    {
+      "clave": "arcilla-seca-fina",
+      "material": "Arcilla seca fina",
+      "pesoMin": 1.6,
+      "pesoMax": 1.92,
+      "alfaMin": 35,
+      "alfaMax": 35,
+      "abrasividad": "C",
+      "corrosividad": "A"
+    },
+    {
+      "clave": "arcilla-seca-a-trozos",
+      "material": "Arcilla seca a trozos",
+      "pesoMin": 0.96,
+      "pesoMax": 1.2,
+      "alfaMin": 35,
+      "alfaMax": 35,
+      "abrasividad": "C",
+      "corrosividad": "A"
+    },
+    {
+      "clave": "arena-de-fundicion",
+      "material": "Arena de fundición",
+      "pesoMin": 1.44,
+      "pesoMax": 1.6,
+      "alfaMin": 39,
+      "alfaMax": 39,
+      "abrasividad": "C",
+      "corrosividad": "A"
+    },
+    {
+      "clave": "arena-humeda",
+      "material": "Arena húmeda",
+      "pesoMin": 1.75,
+      "pesoMax": 2.08,
+      "alfaMin": 45,
+      "alfaMax": 45,
+      "abrasividad": "C",
+      "corrosividad": "A"
+    },
+    {
+      "clave": "arena-seca",
+      "material": "Arena seca",
+      "pesoMin": 1.44,
+      "pesoMax": 1.76,
+      "alfaMin": 35,
+      "alfaMax": 35,
+      "abrasividad": "C",
+      "corrosividad": "A"
+    },
+    {
+      "clave": "asfalto-fragmentado-hasta-13-mm",
+      "material": "Asfalto fragmentado hasta 13 mm",
+      "pesoMin": 0.72,
+      "pesoMax": 0.72,
+      "alfaMin": null,
+      "alfaMax": null,
+      "abrasividad": "A",
+      "corrosividad": "A"
+    },
+    {
+      "clave": "asfalto-para-juntas-de-pavim",
+      "material": "Asfalto para juntas de pavim.",
+      "pesoMin": 1.28,
+      "pesoMax": 1.36,
+      "alfaMin": null,
+      "alfaMax": null,
+      "abrasividad": "A",
+      "corrosividad": "B"
+    },
+    {
+      "clave": "azucar-de-cana-natural",
+      "material": "Azúcar de caña natural",
+      "pesoMin": 0.88,
+      "pesoMax": 1.04,
+      "alfaMin": 30,
+      "alfaMax": 30,
+      "abrasividad": "B",
+      "corrosividad": "B"
+    },
+    {
+      "clave": "azucar-de-melaza-de-remolacha",
+      "material": "Azúcar de melaza de remolacha",
+      "pesoMin": 0.88,
+      "pesoMax": 1.04,
+      "alfaMin": 30,
+      "alfaMax": 30,
+      "abrasividad": "B",
+      "corrosividad": "B"
+    },
+    {
+      "clave": "azucar-en-polvo",
+      "material": "Azúcar en polvo",
+      "pesoMin": 0.8,
+      "pesoMax": 0.96,
+      "alfaMin": null,
+      "alfaMax": null,
+      "abrasividad": "A",
+      "corrosividad": "B"
+    },
+    {
+      "clave": "azufre-fragmentado-13-mm",
+      "material": "Azufre fragmentado 13 mm",
+      "pesoMin": 0.8,
+      "pesoMax": 0.96,
+      "alfaMin": null,
+      "alfaMax": null,
+      "abrasividad": "A",
+      "corrosividad": "C"
+    },
+    {
+      "clave": "azufre-fragmentado-hasta-80-mm",
+      "material": "Azufre fragmentado hasta 80 mm",
+      "pesoMin": 1.28,
+      "pesoMax": 1.36,
+      "alfaMin": null,
+      "alfaMax": null,
+      "abrasividad": "A",
+      "corrosividad": "C"
+    },
+    {
+      "clave": "baquelita-fina",
+      "material": "Baquelita fina",
+      "pesoMin": 0.48,
+      "pesoMax": 0.64,
+      "alfaMin": null,
+      "alfaMax": null,
+      "abrasividad": "A",
+      "corrosividad": "A"
+    },
+    {
+      "clave": "barita",
+      "material": "Barita",
+      "pesoMin": 2.88,
+      "pesoMax": 2.88,
+      "alfaMin": null,
+      "alfaMax": null,
+      "abrasividad": "A",
+      "corrosividad": "A"
+    },
+    {
+      "clave": "bauxita-en-bruto",
+      "material": "Bauxita en bruto",
+      "pesoMin": 1.28,
+      "pesoMax": 1.44,
+      "alfaMin": 31,
+      "alfaMax": 31,
+      "abrasividad": "C",
+      "corrosividad": "A"
+    },
+    {
+      "clave": "bauxita-seca",
+      "material": "Bauxita seca",
+      "pesoMin": 1.09,
+      "pesoMax": 1.09,
+      "alfaMin": 35,
+      "alfaMax": 35,
+      "abrasividad": "C",
+      "corrosividad": "A"
+    },
+    {
+      "clave": "bentonita-natural",
+      "material": "Bentonita natural",
+      "pesoMin": 0.8,
+      "pesoMax": 0.96,
+      "alfaMin": null,
+      "alfaMax": null,
+      "abrasividad": "B",
+      "corrosividad": "A"
+    },
+    {
+      "clave": "bicarbonato-de-sodio",
+      "material": "Bicarbonato de sodio",
+      "pesoMin": 0.656,
+      "pesoMax": 0.656,
+      "alfaMin": 42,
+      "alfaMax": 42,
+      "abrasividad": "A",
+      "corrosividad": "A"
+    },
+    {
+      "clave": "borax-en-bruto",
+      "material": "Bórax en bruto",
+      "pesoMin": 0.96,
+      "pesoMax": 1.04,
+      "alfaMin": null,
+      "alfaMax": null,
+      "abrasividad": "B",
+      "corrosividad": "A"
+    },
+    {
+      "clave": "cal-hasta-3-mm",
+      "material": "Cal hasta 3 mm",
+      "pesoMin": 0.96,
+      "pesoMax": 0.96,
+      "alfaMin": 43,
+      "alfaMax": 43,
+      "abrasividad": "A",
+      "corrosividad": "A"
+    },
+    {
+      "clave": "cal-hidratada-hasta-3-mm",
+      "material": "Cal hidratada hasta 3 mm",
+      "pesoMin": 0.64,
+      "pesoMax": 0.64,
+      "alfaMin": 40,
+      "alfaMax": 40,
+      "abrasividad": "A",
+      "corrosividad": "A"
+    },
+    {
+      "clave": "cal-hidratada-molida",
+      "material": "Cal hidratada molida",
+      "pesoMin": 0.51,
+      "pesoMax": 0.64,
+      "alfaMin": 42,
+      "alfaMax": 42,
+      "abrasividad": "A",
+      "corrosividad": "A"
+    },
+    {
+      "clave": "caliza-en-polvo",
+      "material": "Caliza en polvo",
+      "pesoMin": 1.28,
+      "pesoMax": 1.36,
+      "alfaMin": null,
+      "alfaMax": null,
+      "abrasividad": "B",
+      "corrosividad": "A"
+    },
+    {
+      "clave": "caliza-fragmentada",
+      "material": "Caliza fragmentada",
+      "pesoMin": 1.36,
+      "pesoMax": 1.44,
+      "alfaMin": 35,
+      "alfaMax": 35,
+      "abrasividad": "B",
+      "corrosividad": "A"
+    },
+    {
+      "clave": "cana-de-azucar-cortada",
+      "material": "Caña de azúcar cortada",
+      "pesoMin": 0.24,
+      "pesoMax": 0.29,
+      "alfaMin": 50,
+      "alfaMax": 50,
+      "abrasividad": "B",
+      "corrosividad": "A"
+    },
+    {
+      "clave": "caolin-hasta-80-mm",
+      "material": "Caolín hasta 80 mm",
+      "pesoMin": 1.008,
+      "pesoMax": 1.008,
+      "alfaMin": 35,
+      "alfaMax": 35,
+      "abrasividad": "A",
+      "corrosividad": "A"
+    },
+    {
+      "clave": "carbonato-de-bario",
+      "material": "Carbonato de bario",
+      "pesoMin": 1.152,
+      "pesoMax": 1.152,
+      "alfaMin": null,
+      "alfaMax": null,
+      "abrasividad": "A",
+      "corrosividad": "A"
+    },
+    {
+      "clave": "carbon-de-calcio",
+      "material": "Carbón de calcio",
+      "pesoMin": 1.12,
+      "pesoMax": 1.28,
+      "alfaMin": null,
+      "alfaMax": null,
+      "abrasividad": "B",
+      "corrosividad": "B"
+    },
+    {
+      "clave": "carbon-de-lena",
+      "material": "Carbón de leña",
+      "pesoMin": 0.29,
+      "pesoMax": 0.4,
+      "alfaMin": 35,
+      "alfaMax": 35,
+      "abrasividad": "A",
+      "corrosividad": "A"
+    },
+    {
+      "clave": "carbon-graso-en-bruto",
+      "material": "Carbón graso en bruto",
+      "pesoMin": 0.72,
+      "pesoMax": 0.88,
+      "alfaMin": 38,
+      "alfaMax": 38,
+      "abrasividad": "A",
+      "corrosividad": "B"
+    },
+    {
+      "clave": "carbon-graso-malla-50-mm",
+      "material": "Carbón graso malla 50 mm",
+      "pesoMin": 0.8,
+      "pesoMax": 0.86,
+      "alfaMin": 45,
+      "alfaMax": 45,
+      "abrasividad": "A",
+      "corrosividad": "B"
+    },
+    {
+      "clave": "carbon-negro-en-polvo",
+      "material": "Carbón negro en polvo",
+      "pesoMin": 0.06,
+      "pesoMax": 0.11,
+      "alfaMin": null,
+      "alfaMax": null,
+      "abrasividad": "A",
+      "corrosividad": "A"
+    },
+    {
+      "clave": "carbon-negro-granulado",
+      "material": "Carbón negro granulado",
+      "pesoMin": 0.32,
+      "pesoMax": 0.4,
+      "alfaMin": null,
+      "alfaMax": null,
+      "abrasividad": "A",
+      "corrosividad": "A"
+    },
+    {
+      "clave": "carborundo-hasta-80-mm",
+      "material": "Carborundo hasta 80 mm",
+      "pesoMin": 1.6,
+      "pesoMax": 1.6,
+      "alfaMin": null,
+      "alfaMax": null,
+      "abrasividad": "C",
+      "corrosividad": "A"
+    },
+    {
+      "clave": "cemento-en-bruto",
+      "material": "Cemento en bruto",
+      "pesoMin": 1.6,
+      "pesoMax": 1.76,
+      "alfaMin": null,
+      "alfaMax": null,
+      "abrasividad": "B",
+      "corrosividad": "A"
+    },
+    {
+      "clave": "cemento-portland-suave",
+      "material": "Cemento Portland suave",
+      "pesoMin": 0.96,
+      "pesoMax": 1.2,
+      "alfaMin": 39,
+      "alfaMax": 39,
+      "abrasividad": "B",
+      "corrosividad": "A"
+    },
+    {
+      "clave": "ceniza-de-carb-seco-hasta-80-mm",
+      "material": "Ceniza de carb. seco hasta 80 mm",
+      "pesoMin": 0.56,
+      "pesoMax": 0.64,
+      "alfaMin": 40,
+      "alfaMax": 40,
+      "abrasividad": "B",
+      "corrosividad": "A"
+    },
+    {
+      "clave": "ceniza-de-carb-trit-hasta-80-mm",
+      "material": "Ceniza de carb. trit. hasta 80 mm",
+      "pesoMin": 0.72,
+      "pesoMax": 0.8,
+      "alfaMin": 50,
+      "alfaMax": 50,
+      "abrasividad": "B",
+      "corrosividad": null
+    },
+    {
+      "clave": "cenizas-de-sosa-pesadas",
+      "material": "Cenizas de sosa pesadas",
+      "pesoMin": 0.88,
+      "pesoMax": 1.04,
+      "alfaMin": 32,
+      "alfaMax": 32,
+      "abrasividad": "B",
+      "corrosividad": "C"
+    },
+    {
+      "clave": "cinc-concentrado",
+      "material": "Cinc concentrado",
+      "pesoMin": 1.2,
+      "pesoMax": 1.28,
+      "alfaMin": null,
+      "alfaMax": null,
+      "abrasividad": "B",
+      "corrosividad": "A"
+    },
+    {
+      "clave": "clinker-de-cemento",
+      "material": "Clinker de cemento",
+      "pesoMin": 1.2,
+      "pesoMax": 1.52,
+      "alfaMin": 30,
+      "alfaMax": 40,
+      "abrasividad": "C",
+      "corrosividad": "A"
+    },
+    {
+      "clave": "cloruro-de-magnesio",
+      "material": "Cloruro de magnesio",
+      "pesoMin": 0.528,
+      "pesoMax": 0.528,
+      "alfaMin": null,
+      "alfaMax": null,
+      "abrasividad": "B",
+      "corrosividad": null
+    },
+    {
+      "clave": "cloruro-de-potasio-en-granulos",
+      "material": "Cloruro de potasio en gránulos",
+      "pesoMin": 1.92,
+      "pesoMax": 2.08,
+      "alfaMin": null,
+      "alfaMax": null,
+      "abrasividad": "B",
+      "corrosividad": "B"
+    },
+    {
+      "clave": "coque-de-petroleo-calcinado",
+      "material": "Coque de petróleo calcinado",
+      "pesoMin": 0.56,
+      "pesoMax": 0.72,
+      "alfaMin": null,
+      "alfaMax": null,
+      "abrasividad": "A",
+      "corrosividad": "A"
+    },
+    {
+      "clave": "coque-polvo-6-mm",
+      "material": "Coque polvo 6 mm",
+      "pesoMin": 0.4,
+      "pesoMax": 0.5,
+      "alfaMin": 30,
+      "alfaMax": 45,
+      "abrasividad": "C",
+      "corrosividad": "B"
+    },
+    {
+      "clave": "coque-suave",
+      "material": "Coque suave",
+      "pesoMin": 0.37,
+      "pesoMax": 0.56,
+      "alfaMin": null,
+      "alfaMax": null,
+      "abrasividad": "C",
+      "corrosividad": "B"
+    },
+    {
+      "clave": "corcho",
+      "material": "Corcho",
+      "pesoMin": 0.19,
+      "pesoMax": 0.24,
+      "alfaMin": null,
+      "alfaMax": null,
+      "abrasividad": null,
+      "corrosividad": null
+    },
+    {
+      "clave": "criolita",
+      "material": "Criolita",
+      "pesoMin": 1.76,
+      "pesoMax": 1.76,
+      "alfaMin": null,
+      "alfaMax": null,
+      "abrasividad": "A",
+      "corrosividad": "A"
+    },
+    {
+      "clave": "criolita-en-polvo",
+      "material": "Criolita en polvo",
+      "pesoMin": 1.2,
+      "pesoMax": 1.44,
+      "alfaMin": null,
+      "alfaMax": null,
+      "abrasividad": "A",
+      "corrosividad": "A"
+    },
+    {
+      "clave": "cuarzo-40-80-mm",
+      "material": "Cuarzo 40-80 mm",
+      "pesoMin": 1.36,
+      "pesoMax": 1.52,
+      "alfaMin": null,
+      "alfaMax": null,
+      "abrasividad": "C",
+      "corrosividad": "A"
+    },
+    {
+      "clave": "cuarzo-criba-13-mm",
+      "material": "Cuarzo criba 13 mm",
+      "pesoMin": 1.28,
+      "pesoMax": 1.44,
+      "alfaMin": null,
+      "alfaMax": null,
+      "abrasividad": "C",
+      "corrosividad": "A"
+    },
+    {
+      "clave": "cuarzo-en-polvo",
+      "material": "Cuarzo en polvo",
+      "pesoMin": 1.12,
+      "pesoMax": 1.28,
+      "alfaMin": null,
+      "alfaMax": null,
+      "abrasividad": "C",
+      "corrosividad": "A"
+    },
+    {
+      "clave": "desechos-de-fundicion",
+      "material": "Desechos de fundición",
+      "pesoMin": 1.12,
+      "pesoMax": 1.6,
+      "alfaMin": null,
+      "alfaMax": null,
+      "abrasividad": "C",
+      "corrosividad": "A"
+    },
+    {
+      "clave": "dolomita-fragmentada",
+      "material": "Dolomita fragmentada",
+      "pesoMin": 1.44,
+      "pesoMax": 1.6,
+      "alfaMin": null,
+      "alfaMax": null,
+      "abrasividad": "B",
+      "corrosividad": "A"
+    },
+    {
+      "clave": "escorias-de-fundicion-fragmentadas",
+      "material": "Escorias de fundición fragmentadas",
+      "pesoMin": 1.28,
+      "pesoMax": 1.44,
+      "alfaMin": 25,
+      "alfaMax": 25,
+      "abrasividad": "C",
+      "corrosividad": "A"
+    },
+    {
+      "clave": "feldespato-criba-13-mm",
+      "material": "Feldespato criba 13 mm",
+      "pesoMin": 1.12,
+      "pesoMax": 1.36,
+      "alfaMin": 38,
+      "alfaMax": 38,
+      "abrasividad": "C",
+      "corrosividad": "A"
+    },
+    {
+      "clave": "feldespato-granulado-40-80-mm",
+      "material": "Feldespato granulado 40-80 mm",
+      "pesoMin": 1.44,
+      "pesoMax": 1.76,
+      "alfaMin": 34,
+      "alfaMax": 34,
+      "abrasividad": "C",
+      "corrosividad": "A"
+    },
+    {
+      "clave": "fosfato-acido-fertilizante",
+      "material": "Fosfato ácido fertilizante",
+      "pesoMin": 0.96,
+      "pesoMax": 0.96,
+      "alfaMin": 26,
+      "alfaMax": 26,
+      "abrasividad": "B",
+      "corrosividad": "B"
+    },
+    {
+      "clave": "fosfato-bicalcico",
+      "material": "Fosfato bicálcico",
+      "pesoMin": 0.688,
+      "pesoMax": 0.688,
+      "alfaMin": null,
+      "alfaMax": null,
+      "abrasividad": null,
+      "corrosividad": null
+    },
+    {
+      "clave": "fosfato-bisodico",
+      "material": "Fosfato bisódico",
+      "pesoMin": 0.4,
+      "pesoMax": 0.5,
+      "alfaMin": null,
+      "alfaMax": null,
+      "abrasividad": null,
+      "corrosividad": null
+    },
+    {
+      "clave": "fosfato-florida",
+      "material": "Fosfato florida",
+      "pesoMin": 1.488,
+      "pesoMax": 1.488,
+      "alfaMin": 27,
+      "alfaMax": 27,
+      "abrasividad": "B",
+      "corrosividad": "A"
+    },
+    {
+      "clave": "fosfato-natural-en-polvo",
+      "material": "Fosfato natural en polvo",
+      "pesoMin": 0.96,
+      "pesoMax": 0.96,
+      "alfaMin": 40,
+      "alfaMax": 40,
+      "abrasividad": "B",
+      "corrosividad": "A"
+    },
+    {
+      "clave": "goma-granulada",
+      "material": "Goma granulada",
+      "pesoMin": 0.8,
+      "pesoMax": 0.88,
+      "alfaMin": 35,
+      "alfaMax": 35,
+      "abrasividad": "A",
+      "corrosividad": "A"
+    },
+    {
+      "clave": "goma-regenerada",
+      "material": "Goma regenerada",
+      "pesoMin": 0.4,
+      "pesoMax": 0.48,
+      "alfaMin": 32,
+      "alfaMax": 32,
+      "abrasividad": "A",
+      "corrosividad": "A"
+    },
+    {
+      "clave": "granito-criba-13-mm",
+      "material": "Granito, criba 13 mm",
+      "pesoMin": 1.28,
+      "pesoMax": 1.44,
+      "alfaMin": null,
+      "alfaMax": null,
+      "abrasividad": "C",
+      "corrosividad": "A"
+    },
+    {
+      "clave": "granito-granulado-40-50-mm",
+      "material": "Granito granulado 40-50 mm",
+      "pesoMin": 1.36,
+      "pesoMax": 1.44,
+      "alfaMin": null,
+      "alfaMax": null,
+      "abrasividad": "C",
+      "corrosividad": "A"
+    },
+    {
+      "clave": "grafito-copos",
+      "material": "Grafito, copos",
+      "pesoMin": 0.64,
+      "pesoMax": 0.64,
+      "alfaMin": null,
+      "alfaMax": null,
+      "abrasividad": "A",
+      "corrosividad": "A"
+    },
+    {
+      "clave": "grava",
+      "material": "Grava",
+      "pesoMin": 1.44,
+      "pesoMax": 1.6,
+      "alfaMin": 40,
+      "alfaMax": 40,
+      "abrasividad": "B",
+      "corrosividad": "A"
+    },
+    {
+      "clave": "gres-fragmentado",
+      "material": "Gres fragmentado",
+      "pesoMin": 1.36,
+      "pesoMax": 1.44,
+      "alfaMin": null,
+      "alfaMax": null,
+      "abrasividad": "A",
+      "corrosividad": "A"
+    },
+    {
+      "clave": "guano-seco",
+      "material": "Guano seco",
+      "pesoMin": 1.12,
+      "pesoMax": 1.12,
+      "alfaMin": null,
+      "alfaMax": null,
+      "abrasividad": "B",
+      "corrosividad": null
+    },
+    {
+      "clave": "hormigon",
+      "material": "Hormigón",
+      "pesoMin": 2.08,
+      "pesoMax": 2.4,
+      "alfaMin": null,
+      "alfaMax": null,
+      "abrasividad": "C",
+      "corrosividad": "A"
+    },
+    {
+      "clave": "hormigon-con-hierro",
+      "material": "Hormigón con hierro",
+      "pesoMin": 1.44,
+      "pesoMax": 1.76,
+      "alfaMin": null,
+      "alfaMax": null,
+      "abrasividad": "C",
+      "corrosividad": "A"
+    },
+    {
+      "clave": "jabon-en-polvo",
+      "material": "Jabón en polvo",
+      "pesoMin": 0.32,
+      "pesoMax": 0.4,
+      "alfaMin": null,
+      "alfaMax": null,
+      "abrasividad": "A",
+      "corrosividad": "A"
+    },
+    {
+      "clave": "ladrillo",
+      "material": "Ladrillo",
+      "pesoMin": 2.0,
+      "pesoMax": 2.0,
+      "alfaMin": null,
+      "alfaMax": null,
+      "abrasividad": "C",
+      "corrosividad": "A"
+    },
+    {
+      "clave": "lignito",
+      "material": "Lignito",
+      "pesoMin": 0.64,
+      "pesoMax": 0.72,
+      "alfaMin": 38,
+      "alfaMax": 38,
+      "abrasividad": "A",
+      "corrosividad": "B"
+    },
+    {
+      "clave": "magnesita-fina",
+      "material": "Magnesita fina",
+      "pesoMin": 1.04,
+      "pesoMax": 1.2,
+      "alfaMin": 35,
+      "alfaMax": 35,
+      "abrasividad": "B",
+      "corrosividad": "A"
+    },
+    {
+      "clave": "marmol-fragmentado",
+      "material": "Mármol fragmentado",
+      "pesoMin": 1.44,
+      "pesoMax": 1.52,
+      "alfaMin": null,
+      "alfaMax": null,
+      "abrasividad": "B",
+      "corrosividad": "A"
+    },
+    {
+      "clave": "mineral-de-cinc-calcinado",
+      "material": "Mineral de cinc calcinado",
+      "pesoMin": 1.6,
+      "pesoMax": 1.6,
+      "alfaMin": 38,
+      "alfaMax": 38,
+      "abrasividad": null,
+      "corrosividad": null
+    },
+    {
+      "clave": "mineral-de-cobre",
+      "material": "Mineral de cobre",
+      "pesoMin": 1.92,
+      "pesoMax": 2.4,
+      "alfaMin": null,
+      "alfaMax": null,
+      "abrasividad": null,
+      "corrosividad": null
+    },
+    {
+      "clave": "mineral-de-cromo",
+      "material": "Mineral de cromo",
+      "pesoMin": 2.0,
+      "pesoMax": 2.24,
+      "alfaMin": null,
+      "alfaMax": null,
+      "abrasividad": "C",
+      "corrosividad": "A"
+    },
+    {
+      "clave": "mineral-de-hierro",
+      "material": "Mineral de hierro",
+      "pesoMin": 1.6,
+      "pesoMax": 3.2,
+      "alfaMin": 35,
+      "alfaMax": 35,
+      "abrasividad": "C",
+      "corrosividad": "A"
+    },
+    {
+      "clave": "mineral-de-hierro-fragmentado",
+      "material": "Mineral de hierro fragmentado",
+      "pesoMin": 2.16,
+      "pesoMax": 2.4,
+      "alfaMin": null,
+      "alfaMax": null,
+      "abrasividad": "C",
+      "corrosividad": "A"
+    },
+    {
+      "clave": "mineral-de-manganeso",
+      "material": "Mineral de manganeso",
+      "pesoMin": 2.0,
+      "pesoMax": 2.24,
+      "alfaMin": 39,
+      "alfaMax": 39,
+      "abrasividad": "B",
+      "corrosividad": "A"
+    },
+    {
+      "clave": "mineral-de-plomo",
+      "material": "Mineral de plomo",
+      "pesoMin": 3.2,
+      "pesoMax": 4.32,
+      "alfaMin": 30,
+      "alfaMax": 30,
+      "abrasividad": "B",
+      "corrosividad": "B"
+    },
+    {
+      "clave": "mineral-de-niquel",
+      "material": "Mineral de níquel",
+      "pesoMin": 2.4,
+      "pesoMax": 2.4,
+      "alfaMin": null,
+      "alfaMax": null,
+      "abrasividad": "C",
+      "corrosividad": "B"
+    },
+    {
+      "clave": "nitrato-de-amonio",
+      "material": "Nitrato de amonio",
+      "pesoMin": 0.72,
+      "pesoMax": 0.72,
+      "alfaMin": null,
+      "alfaMax": null,
+      "abrasividad": "B",
+      "corrosividad": "C"
+    },
+    {
+      "clave": "nitrato-de-potasio-salitre",
+      "material": "Nitrato de potasio, salitre",
+      "pesoMin": 1.216,
+      "pesoMax": 1.216,
+      "alfaMin": null,
+      "alfaMax": null,
+      "abrasividad": "B",
+      "corrosividad": "B"
+    },
+    {
+      "clave": "nitrato-de-sodio",
+      "material": "Nitrato de sodio",
+      "pesoMin": 1.12,
+      "pesoMax": 1.28,
+      "alfaMin": 24,
+      "alfaMax": 24,
+      "abrasividad": "A",
+      "corrosividad": null
+    },
+    {
+      "clave": "oxido-de-aluminio",
+      "material": "Óxido de aluminio",
+      "pesoMin": 1.12,
+      "pesoMax": 1.92,
+      "alfaMin": null,
+      "alfaMax": null,
+      "abrasividad": "C",
+      "corrosividad": "A"
+    },
+    {
+      "clave": "oxido-de-cinc-pesado",
+      "material": "Óxido de cinc pesado",
+      "pesoMin": 0.48,
+      "pesoMax": 0.56,
+      "alfaMin": null,
+      "alfaMax": null,
+      "abrasividad": "A",
+      "corrosividad": "A"
+    },
+    {
+      "clave": "oxido-de-plomo",
+      "material": "Óxido de plomo",
+      "pesoMin": 0.96,
+      "pesoMax": 2.04,
+      "alfaMin": null,
+      "alfaMax": null,
+      "abrasividad": "A",
+      "corrosividad": null
+    },
+    {
+      "clave": "oxido-de-titanio",
+      "material": "Óxido de titanio",
+      "pesoMin": 0.4,
+      "pesoMax": 0.4,
+      "alfaMin": null,
+      "alfaMax": null,
+      "abrasividad": "B",
+      "corrosividad": "A"
+    },
+    {
+      "clave": "pirita-de-hierro-50-80-mm",
+      "material": "Pirita de hierro 50-80 mm",
+      "pesoMin": 2.16,
+      "pesoMax": 2.32,
+      "alfaMin": null,
+      "alfaMax": null,
+      "abrasividad": "B",
+      "corrosividad": "B"
+    },
+    {
+      "clave": "pirita-pellets",
+      "material": "Pirita pellets",
+      "pesoMin": 1.92,
+      "pesoMax": 2.08,
+      "alfaMin": null,
+      "alfaMax": null,
+      "abrasividad": "B",
+      "corrosividad": "B"
+    },
+    {
+      "clave": "pizarra-en-polvo",
+      "material": "Pizarra en polvo",
+      "pesoMin": 1.12,
+      "pesoMax": 1.28,
+      "alfaMin": 35,
+      "alfaMax": 35,
+      "abrasividad": "B",
+      "corrosividad": "A"
+    },
+    {
+      "clave": "pizarra-fragmentada-40-80-mm",
+      "material": "Pizarra fragmentada 40÷80 mm",
+      "pesoMin": 1.36,
+      "pesoMax": 1.52,
+      "alfaMin": null,
+      "alfaMax": null,
+      "abrasividad": "B",
+      "corrosividad": "A"
+    },
+    {
+      "clave": "poliestireno",
+      "material": "Poliestireno",
+      "pesoMin": 0.64,
+      "pesoMax": 0.64,
+      "alfaMin": null,
+      "alfaMax": null,
+      "abrasividad": null,
+      "corrosividad": null
+    },
+    {
+      "clave": "remolachas-azuc-pulpa-natur",
+      "material": "Remolachas azuc. pulpa natur.",
+      "pesoMin": 0.4,
+      "pesoMax": 0.72,
+      "alfaMin": null,
+      "alfaMax": null,
+      "abrasividad": "A",
+      "corrosividad": "B"
+    },
+    {
+      "clave": "remolachas-azuc-pulpa-seca",
+      "material": "Remolachas azuc. pulpa seca",
+      "pesoMin": 0.19,
+      "pesoMax": 0.24,
+      "alfaMin": null,
+      "alfaMax": null,
+      "abrasividad": null,
+      "corrosividad": null
+    },
+    {
+      "clave": "sal-comun-seca",
+      "material": "Sal común seca",
+      "pesoMin": 0.64,
+      "pesoMax": 0.88,
+      "alfaMin": null,
+      "alfaMax": null,
+      "abrasividad": "B",
+      "corrosividad": "B"
+    },
+    {
+      "clave": "sal-comun-seca-fina",
+      "material": "Sal común seca fina",
+      "pesoMin": 1.12,
+      "pesoMax": 1.28,
+      "alfaMin": 25,
+      "alfaMax": 25,
+      "abrasividad": "B",
+      "corrosividad": "B"
+    },
+    {
+      "clave": "sal-de-potasio-silvinita",
+      "material": "Sal de potasio silvinita",
+      "pesoMin": 1.28,
+      "pesoMax": 1.28,
+      "alfaMin": null,
+      "alfaMax": null,
+      "abrasividad": "A",
+      "corrosividad": "B"
+    },
+    {
+      "clave": "saponita-talco-fina",
+      "material": "Saponita talco fina",
+      "pesoMin": 0.64,
+      "pesoMax": 0.8,
+      "alfaMin": null,
+      "alfaMax": null,
+      "abrasividad": "A",
+      "corrosividad": "A"
+    },
+    {
+      "clave": "sulfato-de-aluminio-granulado",
+      "material": "Sulfato de aluminio granulado",
+      "pesoMin": 0.864,
+      "pesoMax": 0.864,
+      "alfaMin": 32,
+      "alfaMax": 32,
+      "abrasividad": null,
+      "corrosividad": null
+    },
+    {
+      "clave": "sulfato-de-amonio",
+      "material": "Sulfato de amonio",
+      "pesoMin": 0.72,
+      "pesoMax": 0.93,
+      "alfaMin": 32,
+      "alfaMax": 32,
+      "abrasividad": "B",
+      "corrosividad": "C"
+    },
+    {
+      "clave": "sulfato-de-cobre",
+      "material": "Sulfato de cobre",
+      "pesoMin": 1.2,
+      "pesoMax": 1.36,
+      "alfaMin": 31,
+      "alfaMax": 31,
+      "abrasividad": "A",
+      "corrosividad": null
+    },
+    {
+      "clave": "sulfato-de-hierro",
+      "material": "Sulfato de hierro",
+      "pesoMin": 0.8,
+      "pesoMax": 1.2,
+      "alfaMin": null,
+      "alfaMax": null,
+      "abrasividad": "B",
+      "corrosividad": null
+    },
+    {
+      "clave": "sulfato-de-magnesio",
+      "material": "Sulfato de magnesio",
+      "pesoMin": 1.12,
+      "pesoMax": 1.12,
+      "alfaMin": null,
+      "alfaMax": null,
+      "abrasividad": null,
+      "corrosividad": null
+    },
+    {
+      "clave": "sulfato-de-manganeso",
+      "material": "Sulfato de manganeso",
+      "pesoMin": 1.12,
+      "pesoMax": 1.12,
+      "alfaMin": null,
+      "alfaMax": null,
+      "abrasividad": "C",
+      "corrosividad": "A"
+    },
+    {
+      "clave": "sulfato-de-potasio",
+      "material": "Sulfato de potasio",
+      "pesoMin": 0.67,
+      "pesoMax": 0.77,
+      "alfaMin": null,
+      "alfaMax": null,
+      "abrasividad": "B",
+      "corrosividad": null
+    },
+    {
+      "clave": "superfosfato",
+      "material": "Superfosfato",
+      "pesoMin": 0.816,
+      "pesoMax": 0.816,
+      "alfaMin": 45,
+      "alfaMax": 45,
+      "abrasividad": "B",
+      "corrosividad": "B"
+    },
+    {
+      "clave": "talco-en-polvo",
+      "material": "Talco en polvo",
+      "pesoMin": 0.8,
+      "pesoMax": 0.96,
+      "alfaMin": null,
+      "alfaMax": null,
+      "abrasividad": "A",
+      "corrosividad": "A"
+    },
+    {
+      "clave": "talco-en-granos-40-80-mm",
+      "material": "Talco en granos 40÷80 mm",
+      "pesoMin": 1.36,
+      "pesoMax": 1.52,
+      "alfaMin": null,
+      "alfaMax": null,
+      "abrasividad": "A",
+      "corrosividad": "A"
+    },
+    {
+      "clave": "talco-de-caolin-malla-100",
+      "material": "Talco de caolín malla 100",
+      "pesoMin": 0.67,
+      "pesoMax": 0.9,
+      "alfaMin": 45,
+      "alfaMax": 45,
+      "abrasividad": "A",
+      "corrosividad": "A"
+    },
+    {
+      "clave": "tierra-humeda-arcillosa",
+      "material": "Tierra húmeda arcillosa",
+      "pesoMin": 1.6,
+      "pesoMax": 1.76,
+      "alfaMin": 45,
+      "alfaMax": 45,
+      "abrasividad": "B",
+      "corrosividad": "A"
+    },
+    {
+      "clave": "trigo",
+      "material": "Trigo",
+      "pesoMin": 0.64,
+      "pesoMax": 0.67,
+      "alfaMin": 25,
+      "alfaMax": 25,
+      "abrasividad": "A",
+      "corrosividad": "A"
+    },
+    {
+      "clave": "virutas-de-acero",
+      "material": "Virutas de acero",
+      "pesoMin": 1.6,
+      "pesoMax": 2.4,
+      "alfaMin": null,
+      "alfaMax": null,
+      "abrasividad": "C",
+      "corrosividad": "A"
+    },
+    {
+      "clave": "virutas-de-aluminio",
+      "material": "Virutas de aluminio",
+      "pesoMin": 0.11,
+      "pesoMax": 0.24,
+      "alfaMin": null,
+      "alfaMax": null,
+      "abrasividad": "B",
+      "corrosividad": "A"
+    },
+    {
+      "clave": "virutas-de-hierro-fundido",
+      "material": "Virutas de hierro fundido",
+      "pesoMin": 2.08,
+      "pesoMax": 3.2,
+      "alfaMin": null,
+      "alfaMax": null,
+      "abrasividad": "B",
+      "corrosividad": "A"
+    },
+    {
+      "clave": "virutas-de-madera",
+      "material": "Virutas de madera",
+      "pesoMin": 0.16,
+      "pesoMax": 0.48,
+      "alfaMin": null,
+      "alfaMax": null,
+      "abrasividad": "A",
+      "corrosividad": "A"
+    },
+    {
+      "clave": "yeso-en-polvo",
+      "material": "Yeso en polvo",
+      "pesoMin": 0.96,
+      "pesoMax": 1.12,
+      "alfaMin": 42,
+      "alfaMax": 42,
+      "abrasividad": "A",
+      "corrosividad": "A"
+    },
+    {
+      "clave": "yeso-granulado-13-80-mm",
+      "material": "Yeso granulado 13-80 mm",
+      "pesoMin": 1.12,
+      "pesoMax": 1.28,
+      "alfaMin": 30,
+      "alfaMax": 30,
+      "abrasividad": "A",
+      "corrosividad": "A"
+    }
+  ]
+}

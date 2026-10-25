@@ -1,0 +1,309 @@
+/* =====================================================================
+   styles.css — identidad visual "panel de instrumentos"
+   ===================================================================== */
+:root {
+  --fondo: #1c1c1f;
+  --panel: #26262a;
+  --panel-alto: #303036;
+  --borde: #3e3e45;
+  --borde-claro: #57575f;
+  --texto: #f4f4f5;
+  --suave: #a8a8b3;
+  --acento: #f5c518;
+  --acento-texto: #1c1c1f;
+  --ok: #5ec27a;
+  --aviso: #f5c518;
+  --mal: #ff7070;
+  --dato: #e6e6ea;
+  --error-bg: #3a1c1c;
+  --error-texto: #ffc9c9;
+  color-scheme: dark;
+
+  font-family: "IBM Plex Sans", Arial, sans-serif;
+  color: var(--texto);
+  background: var(--fondo);
+}
+
+/* ---------- Tema claro ---------- */
+:root[data-tema="claro"] {
+  --fondo: #f3f3f5;
+  --panel: #ffffff;
+  --panel-alto: #eaeaee;
+  --borde: #d6d6dc;
+  --borde-claro: #9a9aa5;
+  --texto: #19191c;
+  --suave: #55555f;
+  --acento: #8a6400;
+  --acento-texto: #ffffff;
+  --ok: #2f8f52;
+  --aviso: #8a6400;
+  --mal: #c92a2a;
+  --dato: #2b2b31;
+  --error-bg: #fcebeb;
+  --error-texto: #7a1414;
+  color-scheme: light;
+}
+
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body { margin: 0; line-height: 1.5; transition: background-color .2s ease, color .2s ease; }
+body, .cabecera, .panel, input, select, .boton {
+  transition: background-color .2s ease, color .2s ease, border-color .2s ease;
+}
+.ancho { max-width: 1280px; margin: 0 auto; padding: 0 22px; }
+
+h1, h2, .etiqueta-lectura, .ficha { font-family: "Space Grotesk", "IBM Plex Sans", sans-serif; }
+
+/* mono reservado a cifras y datos técnicos: aquí es funcional, no decorativo */
+input, select, .ficha-material strong, .lectura strong, .memoria .resultado,
+.memoria .sustitucion, .chips button, .avisos li, svg text {
+  font-family: "IBM Plex Mono", monospace;
+}
+
+/* ---------- Cabecera ---------- */
+.cabecera {
+  background: var(--panel);
+  border-bottom: 1px solid var(--borde);
+  padding: 28px 0 24px;
+}
+.ficha { font-size: 12px; font-weight: 600; letter-spacing: .04em; color: var(--acento); margin: 0 0 10px; }
+h1 { font-size: 30px; font-weight: 600; margin: 0 0 10px; color: var(--acento); }
+.sub { max-width: 780px; margin: 0; color: var(--suave); font-size: 15px; }
+.acciones-cab { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+
+.boton {
+  font: inherit; font-size: 14px; font-weight: 600; cursor: pointer;
+  padding: 10px 18px; border-radius: 3px; border: 1px solid var(--borde-claro);
+  background: transparent; color: var(--texto);
+}
+.boton-ambar { background: var(--acento); color: var(--acento-texto); border-color: var(--acento); }
+.boton-ambar:hover { filter: brightness(1.08); }
+.boton-linea { background: transparent; color: var(--texto); }
+.boton-linea:hover { border-color: var(--acento); color: var(--acento); }
+.boton:focus-visible { outline: 2px solid var(--dato); outline-offset: 1px; }
+
+.estado { color: var(--mal); font-weight: 600; margin: 14px 0 0; }
+.estado:empty { display: none; }
+
+/* ---------- Distribución ---------- */
+.rejilla {
+  display: grid;
+  /* la columna de datos no baja de 360px: por debajo se apila (ver responsive) */
+  grid-template-columns: minmax(360px, 420px) minmax(0, 1fr);
+  gap: 20px;
+  padding: 24px 0 40px;
+  align-items: start;
+}
+.columna-entrada, .columna-resultados { min-width: 0; }
+
+/* ---------- Paneles ---------- */
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--borde);
+  border-radius: 4px;
+  padding: 18px 20px;
+  margin: 0 0 16px;
+}
+fieldset.panel { min-width: 0; padding-top: 0; }
+legend {
+  float: left;        /* saca el legend del posicionamiento especial que lo monta sobre el borde */
+  width: 100%;
+  font-size: 15px; font-weight: 600; padding: 16px 2px 0; margin: 0 0 14px;
+  color: var(--acento);
+  display: flex; align-items: center; gap: 10px;
+}
+/* El legend va flotado (ver arriba), y un flotado empuja a su derecha a
+   cualquier contenedor grid o flex que venga después: la primera fila del
+   panel se saldría del recuadro. Por eso se limpia el flotado en todo lo
+   que sigue al legend. */
+legend ~ * { clear: both; }
+
+.indice {
+  display: inline-grid; place-items: center; width: 22px; height: 22px;
+  background: var(--acento); color: var(--acento-texto); font-size: 12px; font-weight: 700;
+  border-radius: 2px; font-family: "IBM Plex Mono", monospace;
+}
+h2 { font-size: 14px; font-weight: 600; margin: 0 0 14px; letter-spacing: .02em; color: var(--acento); }
+
+/* ---------- Formularios ---------- */
+.campo { margin-bottom: 14px; min-width: 0; }
+.campo:last-child { margin-bottom: 0; }
+label, .label-grupo { display: block; font-size: 13px; font-weight: 500; color: var(--suave); margin: 0 0 6px; }
+label small { opacity: .8; }
+input[type="number"], input[type="search"], input[type="text"], select {
+  width: 100%; min-width: 0; background: var(--panel-alto); color: var(--texto);
+  border: 1px solid var(--borde-claro); border-radius: 3px; padding: 8px 10px; font-size: 14px;
+}
+input:focus-visible, select:focus-visible { outline: 2px solid var(--dato); outline-offset: 1px; }
+/* auto-fit: pasa solo a una columna cuando el contenedor es estrecho,
+   sin depender del ancho de la pantalla. Esto evita que etiquetas como
+   «Calidad de tejido» se partan en tres líneas junto a un select diminuto. */
+.rejilla-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(165px, 1fr)); gap: 14px; }
+.par-rango { display: grid; grid-template-columns: minmax(0, 1fr) 86px; gap: 10px; align-items: center; }
+input[type="range"] { width: 100%; accent-color: var(--acento); }
+.ayuda { font-size: 12px; color: var(--suave); margin: 6px 0 0; }
+.radios { display: flex; flex-direction: column; gap: 8px; }
+.radios label { display: flex; align-items: center; gap: 8px; font-weight: 400; color: var(--texto); font-size: 14px; }
+
+.chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.chips button {
+  background: var(--panel-alto); border: 1px solid var(--borde-claro); color: var(--dato);
+  border-radius: 3px; padding: 3px 8px; font-size: 12px; cursor: pointer;
+}
+.chips button:hover { border-color: var(--dato); }
+.chips button:focus-visible { outline: 2px solid var(--dato); outline-offset: 1px; }
+
+.ficha-material {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 8px 16px;
+  background: var(--panel-alto); border: 1px solid var(--borde); border-radius: 3px;
+  padding: 12px 14px; margin-bottom: 14px; font-size: 13px;
+}
+.ficha-material div { display: flex; justify-content: space-between; gap: 8px; }
+.ficha-material span { color: var(--suave); }
+.ficha-material strong { color: var(--dato); font-weight: 500; }
+
+/* ---------- Resumen (lectura principal) ---------- */
+.panel-resumen {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;
+  border-color: var(--acento); background: linear-gradient(180deg, var(--panel-alto), var(--panel));
+}
+.lectura-ancha { grid-column: 1 / -1; }
+.etiqueta-lectura { display: block; font-size: 11px; color: var(--suave); letter-spacing: .03em; margin-bottom: 6px; }
+.lectura strong { font-size: 22px; font-weight: 600; color: var(--acento); display: block; }
+.lectura-ancha strong { font-size: 17px; color: var(--texto); }
+
+.panel-error { border-color: var(--mal); background: var(--error-bg); color: var(--error-texto); font-size: 14px; }
+
+/* ---------- Avisos ---------- */
+.avisos { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+.avisos li { font-size: 13px; padding: 8px 10px; border-radius: 3px; border-left: 3px solid var(--borde); background: var(--panel-alto); }
+.avisos li[data-nivel="ok"] { border-left-color: var(--ok); }
+.avisos li[data-nivel="aviso"] { border-left-color: var(--aviso); }
+.avisos li[data-nivel="error"] { border-left-color: var(--mal); color: var(--error-texto); }
+.avisos li[data-nivel="info"] { border-left-color: var(--dato); }
+.avisos:empty::after { content: "Sin datos todavía."; color: var(--suave); font-size: 13px; }
+
+/* ---------- SVG técnicos ---------- */
+svg { width: 100%; height: auto; display: block; background: var(--panel-alto); border: 1px solid var(--borde); border-radius: 3px; }
+
+/* ---------- Memoria de cálculo (consola) ---------- */
+.panel-memoria { background: var(--fondo); }
+.memoria { list-style: none; counter-reset: paso; margin: 0; padding: 0; }
+.memoria li {
+  counter-increment: paso; padding: 10px 0; border-top: 1px solid var(--borde);
+  font-size: 13px;
+}
+.memoria li:first-child { border-top: none; }
+.memoria .titulo { color: var(--texto); font-weight: 600; font-family: "IBM Plex Sans", sans-serif; font-size: 13px; }
+.memoria .titulo::before { content: counter(paso) "."; color: var(--acento); margin-right: 8px; }
+.memoria .formula { color: var(--dato); font-size: 12.5px; margin: 4px 0 2px 20px; }
+.memoria .sustitucion { color: var(--suave); font-size: 12.5px; margin: 0 0 2px 20px; }
+.memoria .resultado { color: var(--acento); font-weight: 600; font-size: 13px; margin: 0 0 0 20px; }
+.memoria .nota { color: var(--suave); font-size: 12px; margin: 4px 0 0 20px; font-family: "IBM Plex Sans", sans-serif; font-style: italic; }
+
+/* ---------- Pie ---------- */
+.pie { color: var(--suave); font-size: 12px; padding: 18px 0 30px; border-top: 1px solid var(--borde); }
+.pie p { margin: 0 0 4px; }
+.pie p:first-child { color: var(--texto); font-weight: 500; }
+.pie p:last-child { margin-bottom: 0; }
+
+/* =====================================================================
+   RESPONSIVE
+   La app se usa igual en escritorio, tablet y móvil: cambia el número de
+   columnas y los tamaños, pero nunca el contenido ni los cálculos.
+   ===================================================================== */
+
+/* Evita que un texto largo sin espacios (la designación de la banda, las
+   sustituciones numéricas de la memoria) ensanche la página y provoque
+   scroll horizontal. Vale para todos los tamaños. */
+.lectura strong, .lectura-ancha strong, .panel-error,
+.memoria .formula, .memoria .sustitucion, .memoria .resultado,
+.avisos li, .ficha-material strong {
+  overflow-wrap: anywhere;
+}
+html, body { overflow-x: hidden; }
+
+/* ---------- Tablet (hasta 1024px): una sola columna ----------
+   A dos columnas, por debajo de ~1024px la de datos quedaría demasiado
+   estrecha y los campos se amontonarían: mejor apilarlas antes. */
+@media (max-width: 1024px) {
+  .rejilla { grid-template-columns: 1fr; }
+}
+
+/* ---------- Móvil grande (hasta 640px) ---------- */
+@media (max-width: 640px) {
+  .panel-resumen { grid-template-columns: 1fr 1fr; }
+  .lectura strong { font-size: 20px; }
+  .lectura-ancha strong { font-size: 15px; }
+}
+
+/* ---------- Móvil (hasta 480px) ---------- */
+@media (max-width: 480px) {
+  .ancho { padding: 0 14px; }
+
+  /* Cabecera más compacta y botones a ancho completo, fáciles de pulsar */
+  .cabecera { padding: 20px 0 18px; }
+  .ficha { font-size: 11px; }
+  h1 { font-size: 22px; line-height: 1.25; }
+  .sub { font-size: 14px; }
+  .acciones-cab { flex-direction: column; gap: 8px; }
+  .acciones-cab .boton { width: 100%; text-align: center; min-height: 44px; }
+
+  .rejilla { gap: 14px; padding: 16px 0 24px; }
+  .panel { padding: 14px 16px; margin-bottom: 14px; }
+  legend { padding-top: 14px; margin-bottom: 12px; }
+
+  /* Un dato por fila (auto-fit ya lo hace, pero sin hueco sobrante) */
+  .rejilla-2 { gap: 0; }
+  .par-rango { grid-template-columns: 1fr; gap: 8px; }
+  .par-rango input[type="number"] { width: 100%; }
+  .ficha-material { grid-template-columns: 1fr; gap: 6px; }
+
+  /* 16px es el mínimo que evita que iOS haga zoom al enfocar un campo */
+  input[type="number"], input[type="search"], input[type="text"], select {
+    font-size: 16px; padding: 10px 12px;
+  }
+  /* El deslizador necesita más alto para poder cogerlo con el dedo */
+  input[type="range"] { height: 28px; }
+
+  /* Botones de velocidad: antes eran de 20px de alto, imposibles de pulsar */
+  .chips { gap: 8px; }
+  .chips button { min-height: 36px; min-width: 56px; font-size: 13px; }
+
+  /* Resumen: una cifra por fila, en bloques separados y bien visibles */
+  .panel-resumen { grid-template-columns: 1fr; gap: 0; }
+  .lectura { padding: 10px 0; border-top: 1px solid var(--borde); }
+  .lectura:first-child { padding-top: 0; border-top: none; }
+  .lectura strong { font-size: 21px; }
+  .lectura-ancha strong { font-size: 14px; }
+
+  /* Memoria de cálculo: menos sangría para ganar ancho útil */
+  .memoria .formula, .memoria .sustitucion, .memoria .resultado, .memoria .nota {
+    margin-left: 0;
+  }
+  .memoria li { padding: 12px 0; }
+
+  /* Los SVG tienen viewBox de 420 px: por debajo de eso el texto se
+     encogería demasiado, así que se mantiene un ancho mínimo legible y
+     el panel permite desplazarlos lateralmente. */
+  .panel-svg { overflow-x: auto; }
+  .panel-svg svg { min-width: 360px; }
+}
+
+/* ---------- Móvil estrecho (hasta 360px) ---------- */
+@media (max-width: 360px) {
+  .ancho { padding: 0 10px; }
+  h1 { font-size: 20px; }
+  .panel { padding: 12px 13px; }
+  .lectura strong { font-size: 19px; }
+}
+
+/* ---------- Impresión ---------- */
+@media print {
+  body { background: #fff; color: #000; }
+  .cabecera { background: #fff; border: none; }
+  .acciones-cab, #btn-imprimir, .estado { display: none !important; }
+  .panel { border: 1px solid #ccc; break-inside: avoid; }
+  svg, .panel-alto, input, select { background: #fff !important; }
+  .rejilla { grid-template-columns: 1fr; }
+}

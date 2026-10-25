@@ -1,0 +1,351 @@
+{
+  "gravedad": 9.81,
+  "fluidez": {
+    "fuente": "Apuntes de la asignatura (Cintas transportadoras, tema 3): relación fluidez - ángulo de reposo α - ángulo de sobrecarga β",
+    "clases": [
+      {
+        "clase": "Muy buena",
+        "alfaMax": 20,
+        "betaRecomendado": 5
+      },
+      {
+        "clase": "Buena",
+        "alfaMax": 30,
+        "betaRecomendado": 10
+      },
+      {
+        "clase": "Normal",
+        "alfaMax": 40,
+        "betaRecomendado": 20
+      },
+      {
+        "clase": "Mala",
+        "alfaMax": 90,
+        "betaRecomendado": 30
+      }
+    ]
+  },
+  "factorInclinacionK": {
+    "delta": [
+      0,
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14,
+      16,
+      18,
+      20
+    ],
+    "K": [
+      1.0,
+      1.0,
+      0.99,
+      0.98,
+      0.97,
+      0.95,
+      0.93,
+      0.91,
+      0.89,
+      0.85,
+      0.81
+    ]
+  },
+  "factorAlimentacionK1": [
+    {
+      "nombre": "Alimentación regular",
+      "valor": 1.0
+    },
+    {
+      "nombre": "Alimentación poco regular",
+      "valor": 0.95
+    },
+    {
+      "nombre": "Alimentación irregular",
+      "valor": 0.9
+    },
+    {
+      "nombre": "Alimentación muy irregular",
+      "valor": 0.8
+    }
+  ],
+  "coeficienteC": {
+    "L": [
+      3,
+      4,
+      5,
+      6,
+      8,
+      10,
+      13,
+      16,
+      20,
+      25,
+      32,
+      40,
+      50,
+      63,
+      80,
+      90,
+      100,
+      120,
+      140,
+      160,
+      180,
+      200,
+      250,
+      300,
+      350,
+      400,
+      450,
+      500,
+      550,
+      600,
+      700,
+      800,
+      900,
+      1000,
+      1500,
+      2000
+    ],
+    "C": [
+      9.0,
+      7.6,
+      6.6,
+      5.9,
+      5.1,
+      4.5,
+      4.0,
+      3.6,
+      3.2,
+      2.9,
+      2.6,
+      2.4,
+      2.2,
+      2.0,
+      1.92,
+      1.86,
+      1.78,
+      1.7,
+      1.63,
+      1.56,
+      1.5,
+      1.45,
+      1.38,
+      1.31,
+      1.27,
+      1.25,
+      1.2,
+      1.2,
+      1.18,
+      1.17,
+      1.14,
+      1.12,
+      1.1,
+      1.09,
+      1.06,
+      1.05
+    ],
+    "fuente": "DIN 22101"
+  },
+  "coeficienteRozamientoF": [
+    {
+      "nombre": "Cinta bien alineada, rodillos de calidad, buen mantenimiento",
+      "valor": 0.017
+    },
+    {
+      "nombre": "Condiciones normales de servicio",
+      "valor": 0.02
+    },
+    {
+      "nombre": "Ambiente polvoriento o mantenimiento deficiente",
+      "valor": 0.025
+    },
+    {
+      "nombre": "Condiciones muy desfavorables (sobrecargas, baja temperatura)",
+      "valor": 0.03
+    }
+  ],
+  "rozamientoBandaTambor": [
+    {
+      "nombre": "Tambor de acero desnudo, seco",
+      "valor": 0.25
+    },
+    {
+      "nombre": "Tambor de acero desnudo, húmedo",
+      "valor": 0.2
+    },
+    {
+      "nombre": "Tambor revestido de goma, seco",
+      "valor": 0.35
+    },
+    {
+      "nombre": "Tambor revestido de goma, húmedo",
+      "valor": 0.3
+    },
+    {
+      "nombre": "Tambor con revestimiento cerámico",
+      "valor": 0.4
+    }
+  ],
+  "anguloAbrazamiento": [
+    {
+      "nombre": "180° - tambor motriz simple",
+      "grados": 180
+    },
+    {
+      "nombre": "200° - con tambor de desvío",
+      "grados": 200
+    },
+    {
+      "nombre": "210° - con tambor de desvío",
+      "grados": 210
+    },
+    {
+      "nombre": "220° - con tambor de desvío",
+      "grados": 220
+    },
+    {
+      "nombre": "240° - con tambor de desvío",
+      "grados": 240
+    },
+    {
+      "nombre": "360° - dos tambores en tándem",
+      "grados": 360
+    },
+    {
+      "nombre": "420° - dos tambores en tándem",
+      "grados": 420
+    }
+  ],
+  "flechaAdmisible": 0.02,
+  "tejidos": [
+    {
+      "codigo": "L",
+      "nombre": "L - tela ligera",
+      "resistenciaKgfCm": 60,
+      "masaKgM2": 1.0
+    },
+    {
+      "codigo": "LS",
+      "nombre": "LS - tela semipesada",
+      "resistenciaKgfCm": 70,
+      "masaKgM2": 1.1
+    },
+    {
+      "codigo": "P",
+      "nombre": "P - tela pesada",
+      "resistenciaKgfCm": 75,
+      "masaKgM2": 1.2
+    }
+  ],
+  "recubrimientos": [
+    {
+      "codigo": "A",
+      "nombre": "A - altamente resistente a la abrasión"
+    },
+    {
+      "codigo": "B",
+      "nombre": "B - resistencia media a la abrasión"
+    },
+    {
+      "codigo": "C",
+      "nombre": "C - resistencia normal"
+    }
+  ],
+  "densidadGomaKgM2mm": 1.15,
+  "banda": {
+    "telasMin": 2,
+    "telasMax": 6,
+    "coefSeguridad": 10
+  },
+  "rodillos": {
+    "diametros": [
+      89,
+      108,
+      133,
+      159,
+      194
+    ],
+    "masaGiratoriaKgM": {
+      "89": 8.5,
+      "108": 11.5,
+      "133": 16.0,
+      "159": 22.0,
+      "194": 30.0
+    },
+    "factorLongitud": 1.15
+  },
+  "diametrosTambor": [
+    250,
+    315,
+    400,
+    500,
+    630,
+    800,
+    1000,
+    1250,
+    1400,
+    1600
+  ],
+  "velocidadesNormalizadas": [
+    0.42,
+    0.52,
+    0.66,
+    0.84,
+    1.05,
+    1.31,
+    1.68,
+    2.09,
+    2.62,
+    3.35,
+    4.19,
+    5.24
+  ],
+  "velocidadMaxPorAbrasividad": {
+    "nota": "Velocidad máxima orientativa según abrasividad del material (criterio práctico: a mayor abrasividad, menor velocidad para limitar el desgaste).",
+    "A": 4.2,
+    "B": 3.35,
+    "C": 2.62
+  },
+  "motoresNormalizadosKW": [
+    0.37,
+    0.55,
+    0.75,
+    1.1,
+    1.5,
+    2.2,
+    3,
+    4,
+    5.5,
+    7.5,
+    11,
+    15,
+    18.5,
+    22,
+    30,
+    37,
+    45,
+    55,
+    75,
+    90,
+    110,
+    132,
+    160,
+    200,
+    250,
+    315,
+    355,
+    400,
+    450,
+    500,
+    560,
+    630,
+    710,
+    800,
+    900,
+    1000
+  ]
+}
